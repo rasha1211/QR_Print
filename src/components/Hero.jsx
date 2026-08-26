@@ -10,7 +10,7 @@ import "./Hero.css";
 
 function Hero({ onStartPrinting }) {
   // Real QR code destination
-  const qrValue = `${window.location.origin}/#print`;
+  const qrValue = `${window.location.origin}/print`;
   return (
     <section className="hero" id="print">
       <div className="hero-glow hero-glow-one"></div>

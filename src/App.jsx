@@ -10,6 +10,7 @@ import PrintApp from "./components/PrintApp";
 
 function App() {
   const [showPrintApp, setShowPrintApp] = useState(
+    window.location.pathname === "/print" ||
     window.location.pathname.startsWith("/print/")
   );
 

@@ -75,7 +75,7 @@ function CTA({ onStartPrinting }) {
             <div className="cta-qr">
 
               <QRCodeCanvas
-                value={window.location.origin}
+                value={`${window.location.origin}/print`}
                 size={210}
                 bgColor="#ffffff"
                 fgColor="#101522"
