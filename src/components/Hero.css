@@ -1,0 +1,1745 @@
+.hero {
+  position: relative;
+  min-height: 820px;
+  padding: 145px 6% 75px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 42%,
+      rgba(99, 91, 255, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 15% 18%,
+      rgba(34, 211, 238, 0.055),
+      transparent 24%
+    ),
+    var(--background);
+
+  color: var(--text);
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+.hero-glow-one {
+  top: 90px;
+  right: -170px;
+  width: 560px;
+  height: 560px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(99, 91, 255, 0.16),
+      rgba(139, 92, 246, 0.08) 35%,
+      transparent 70%
+    );
+}
+
+.hero-glow-two {
+  bottom: -180px;
+  left: -160px;
+  width: 420px;
+  height: 420px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(34, 211, 238, 0.08),
+      transparent 70%
+    );
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1260px;
+  min-height: 610px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+
+  gap: 65px;
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 24px;
+  padding: 7px 11px;
+
+  border: 1px solid rgba(99, 91, 255, 0.14);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  color: #737b8a;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+
+  box-shadow:
+    0 5px 18px rgba(30, 35, 55, 0.035);
+}
+
+.hero-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  box-shadow:
+    0 0 0 5px rgba(99, 91, 255, 0.10),
+    0 0 12px rgba(99, 91, 255, 0.3);
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(48px, 5.2vw, 68px);
+  line-height: 1;
+
+  letter-spacing: -3.5px;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  background: var(--brand-gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  color: var(--primary);
+}
+
+.hero-description {
+  max-width: 475px;
+
+  margin: 28px 0 32px;
+
+  color: var(--text-soft);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-primary-button {
+  min-height: 49px;
+  padding: 0 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 10px;
+
+  background: var(--dark);
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 25px rgba(11, 16, 32, 0.14);
+
+  transition: 0.25s ease;
+}
+
+.hero-primary-button:hover {
+  transform: translateY(-3px);
+
+  background: var(--primary);
+
+  box-shadow:
+    0 15px 30px rgba(99, 91, 255, 0.24);
+}
+
+.hero-primary-button svg {
+  font-size: 15px;
+}
+
+.hero-text-button {
+  min-height: 49px;
+  padding: 0 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: #5f6877;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.hero-text-button:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(99, 91, 255, 0.35);
+
+  background: #f5f3ff;
+
+  color: var(--primary);
+}
+
+
+/* =========================
+   PROOF
+========================= */
+
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-top: 27px;
+}
+
+.proof-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #858d9b;
+
+  font-size: 9px;
+}
+
+.proof-check {
+  width: 17px;
+  height: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(34, 167, 106, 0.08);
+
+  color: var(--success);
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   RIGHT PRODUCT
+========================= */
+
+.hero-product {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-orbit {
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  border: 1px solid rgba(99, 91, 255, 0.12);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(99, 91, 255, 0.10),
+      rgba(139, 92, 246, 0.035) 45%,
+      transparent 70%
+    );
+
+  box-shadow:
+    0 0 90px rgba(99, 91, 255, 0.055);
+}
+
+.product-orbit::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 35px;
+
+  border: 1px dashed rgba(99, 91, 255, 0.15);
+
+  border-radius: 50%;
+}
+
+
+/* =========================
+   FLOATING CARDS
+========================= */
+
+.floating-card {
+  position: absolute;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid rgba(228, 231, 238, 0.9);
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 20px 50px rgba(39, 45, 65, 0.10);
+
+  backdrop-filter: blur(14px);
+}
+
+.floating-card-file {
+  top: 55px;
+  left: 5px;
+
+  width: 220px;
+
+  padding: 13px;
+
+  gap: 10px;
+}
+
+.floating-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f1efff;
+
+  color: var(--primary);
+
+  font-size: 16px;
+}
+
+.floating-card-file strong,
+.floating-card-file span {
+  display: block;
+}
+
+.floating-card-file strong {
+  color: #292f3b;
+  font-size: 10px;
+}
+
+.floating-card-file span {
+  margin-top: 3px;
+
+  color: #999faa;
+
+  font-size: 7px;
+}
+
+.floating-check {
+  margin-left: auto;
+
+  color: var(--success);
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   PRINTER READY CARD
+========================= */
+
+.floating-card-status {
+  right: 0;
+  bottom: 65px;
+
+  padding: 11px 14px;
+
+  gap: 8px;
+
+  color: #3b4350;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.status-pulse {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--success);
+
+  box-shadow:
+    0 0 0 5px rgba(34, 167, 106, 0.08),
+    0 0 10px rgba(34, 167, 106, 0.45);
+}
+
+
+/* =========================
+   MAIN PANEL
+========================= */
+
+.product-panel {
+  position: relative;
+  z-index: 5;
+
+  width: 540px;
+
+  padding: 20px;
+
+  border: 1px solid rgba(228, 231, 238, 0.95);
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  box-shadow:
+    0 35px 80px rgba(39, 45, 65, 0.10),
+    0 8px 20px rgba(39, 45, 65, 0.04);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================
+   PANEL HEADER
+========================= */
+
+.product-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid #eceef3;
+}
+
+.product-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.product-brand-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: var(--dark);
+
+  color: white;
+
+  font-size: 15px;
+}
+
+.product-brand strong,
+.product-brand span {
+  display: block;
+}
+
+.product-brand strong {
+  color: #252b38;
+  font-size: 11px;
+}
+
+.product-brand span {
+  margin-top: 3px;
+
+  color: #999faa;
+
+  font-size: 7px;
+}
+
+.online-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: var(--success);
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.online-status span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--success);
+
+  box-shadow:
+    0 0 7px rgba(34, 167, 106, 0.5);
+}
+
+
+/* =====================================================
+   SCANNER → PRINTER WORKFLOW
+===================================================== */
+
+.printing-workflow {
+  min-height: 345px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 30px 8px 20px;
+}
+
+
+/* =========================
+   SCANNER
+========================= */
+
+.scanner-section {
+  width: 190px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-display {
+  position: relative;
+
+  width: 160px;
+  height: 160px;
+
+  padding: 27px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(99, 91, 255, 0.10);
+
+  border-radius: 17px;
+
+  background: white;
+
+  box-shadow:
+    0 20px 45px rgba(45, 40, 120, 0.12),
+    0 0 0 8px rgba(255, 255, 255, 0.6),
+    0 0 35px rgba(99, 91, 255, 0.06);
+}
+
+.qr-code {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 5px;
+}
+
+.qr-square {
+  border-radius: 1px;
+
+  background: var(--dark);
+}
+
+.qr-two,
+.qr-five,
+.qr-nine {
+  background: transparent;
+}
+
+.qr-corner {
+  position: absolute;
+  z-index: 3;
+
+  width: 30px;
+  height: 30px;
+
+  border: 4px solid var(--dark);
+}
+
+.qr-corner-tl {
+  top: 14px;
+  left: 14px;
+
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.qr-corner-tr {
+  top: 14px;
+  right: 14px;
+
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.qr-corner-bl {
+  bottom: 14px;
+  left: 14px;
+
+  border-right: 0;
+  border-top: 0;
+}
+
+.qr-corner-br {
+  right: 14px;
+  bottom: 14px;
+
+  border-left: 0;
+  border-top: 0;
+}
+
+
+/* =========================
+   QR SCANNING
+========================= */
+
+.qr-scan-line {
+  position: absolute;
+  z-index: 5;
+
+  left: 9px;
+  right: 9px;
+
+  height: 2px;
+
+  background: var(--cyan);
+
+  box-shadow:
+    0 0 12px rgba(34, 211, 238, 0.85);
+
+  animation: qrScan 2.5s ease-in-out infinite;
+}
+
+@keyframes qrScan {
+  0% {
+    top: 15%;
+  }
+
+  50% {
+    top: 85%;
+  }
+
+  100% {
+    top: 15%;
+  }
+}
+
+.scan-label {
+  margin-top: 18px;
+
+  text-align: center;
+}
+
+.scan-label strong,
+.scan-label span {
+  display: block;
+}
+
+.scan-label strong {
+  color: #303643;
+
+  font-size: 10px;
+}
+
+.scan-label span {
+  margin-top: 4px;
+
+  color: #999faa;
+
+  font-size: 7px;
+}
+
+
+/* =========================
+   CONNECTION
+========================= */
+
+.workflow-connection {
+  position: relative;
+
+  width: 65px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.connection-arrow {
+  color: var(--primary);
+
+  font-size: 22px;
+
+  animation: arrowPulse 1.6s ease-in-out infinite;
+}
+
+.connection-text {
+  color: #9a9fab;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+@keyframes arrowPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateX(-4px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+}
+
+
+/* =====================================================
+   REALISTIC PRINTER
+===================================================== */
+
+.printer-section {
+  width: 190px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.printer-machine {
+  position: relative;
+
+  width: 185px;
+  height: 205px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 55px;
+}
+
+
+/* =========================
+   PAPER FEED
+========================= */
+
+.printed-pages {
+  position: absolute;
+  z-index: 2;
+
+  top: 4px;
+
+  width: 110px;
+  height: 95px;
+
+  overflow: hidden;
+}
+
+
+/* Individual paper */
+
+.printed-page {
+  position: absolute;
+
+  left: 50%;
+
+  width: 82px;
+  height: 60px;
+
+  padding: 12px 10px;
+
+  border: 1px solid #d9dce3;
+
+  border-radius: 2px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 12px rgba(20, 25, 40, 0.08);
+
+  transform: translateX(-50%);
+
+  opacity: 0;
+}
+
+
+/* Paper lines */
+
+.printed-page span {
+  display: block;
+
+  width: 65%;
+  height: 3px;
+
+  margin-bottom: 6px;
+
+  border-radius: 3px;
+
+  background: #d8dce4;
+}
+
+.printed-page span:nth-child(2) {
+  width: 82%;
+}
+
+.printed-page span:nth-child(3) {
+  width: 45%;
+}
+
+
+/* =========================
+   CONTINUOUS PAPER ANIMATION
+========================= */
+
+.page-one {
+  animation: paperFeed 4s linear infinite;
+  animation-delay: 0s;
+}
+
+.page-two {
+  animation: paperFeed 4s linear infinite;
+  animation-delay: 1s;
+}
+
+.page-three {
+  animation: paperFeed 4s linear infinite;
+  animation-delay: 2s;
+}
+
+.page-four {
+  animation: paperFeed 4s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes paperFeed {
+
+  0% {
+    transform: translate(-50%, -65px);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  35% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+
+  65% {
+    transform: translate(-50%, 30px);
+    opacity: 1;
+  }
+
+  85% {
+    transform: translate(-50%, 70px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 85px);
+    opacity: 0;
+  }
+}
+
+
+/* =====================================================
+   PRINTER TOP / PAPER SLOT
+===================================================== */
+
+.printer-top {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 42px;
+
+  width: 145px;
+  height: 38px;
+
+  border-radius: 12px 12px 5px 5px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #3d465a,
+      #222a3c
+    );
+
+  box-shadow:
+    0 10px 18px rgba(20, 25, 40, 0.18);
+}
+
+
+/* Paper slot on top */
+
+.printer-top::before {
+  content: "";
+
+  position: absolute;
+
+  top: 7px;
+  left: 17px;
+  right: 17px;
+
+  height: 9px;
+
+  border-radius: 5px;
+
+  background: #090e19;
+
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.65);
+}
+
+
+/* Small top control panel */
+
+.printer-top::after {
+  content: "";
+
+  position: absolute;
+
+  right: 14px;
+  bottom: 7px;
+
+  width: 28px;
+  height: 5px;
+
+  border-radius: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #687286 0 25%,
+      #313a4e 25% 100%
+    );
+
+  opacity: 0.8;
+}
+
+
+/* =========================
+   PRINTER DISPLAY
+========================= */
+
+.printer-display {
+  position: absolute;
+
+  z-index: 8;
+
+  right: 17px;
+  bottom: 7px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  color: #9debd1;
+
+  font-size: 5px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.printer-display span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--success);
+
+  box-shadow:
+    0 0 6px rgba(34, 167, 106, 0.8);
+
+  animation: printerLight 1s ease-in-out infinite;
+}
+
+@keyframes printerLight {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   MAIN PRINTER BODY
+===================================================== */
+
+.printer-body {
+  position: relative;
+
+  z-index: 4;
+
+  width: 170px;
+  height: 105px;
+
+  margin-top: 35px;
+
+  border-radius: 8px 8px 16px 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #343d50 0%,
+      #222a3b 45%,
+      #151c2c 100%
+    );
+
+  box-shadow:
+    0 22px 35px rgba(20, 25, 40, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+
+/* Front upper bevel */
+
+.printer-body::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10px;
+  right: 10px;
+
+  height: 18px;
+
+  border-radius: 8px 8px 4px 4px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0)
+    );
+}
+
+
+/* Front output tray */
+
+.printer-body::after {
+  content: "";
+
+  position: absolute;
+
+  left: 16px;
+  right: 16px;
+
+  bottom: 13px;
+
+  height: 22px;
+
+  border-radius: 4px 4px 9px 9px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0b111e,
+      #080d17
+    );
+
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================
+   PAPER OUTPUT SLOT
+========================= */
+
+.printer-slot {
+  position: absolute;
+
+  z-index: 8;
+
+  top: 28px;
+
+  left: 20px;
+  right: 20px;
+
+  height: 9px;
+
+  border-radius: 5px;
+
+  background: #080d18;
+
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.8),
+    0 1px 0 rgba(255,255,255,0.05);
+}
+
+
+/* =========================
+   STATUS LIGHT
+========================= */
+
+.printer-light {
+  position: absolute;
+
+  z-index: 10;
+
+  right: 18px;
+  bottom: 14px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--cyan);
+
+  box-shadow:
+    0 0 10px rgba(34, 211, 238, 0.7);
+
+  animation: printerStatus 1.8s ease-in-out infinite;
+}
+
+@keyframes printerStatus {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================
+   PRINTER SIDE DETAILS
+========================= */
+
+.printer-body .printer-slot::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 4px;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =====================================================
+   PRINTER LABEL
+===================================================== */
+
+.printer-label {
+  margin-top: 15px;
+
+  text-align: center;
+}
+
+.printer-label strong,
+.printer-label span {
+  display: block;
+}
+
+.printer-label strong {
+  color: #303643;
+
+  font-size: 10px;
+}
+
+.printer-label span {
+  margin-top: 4px;
+
+  color: #999faa;
+
+  font-size: 7px;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #eceef3;
+}
+
+.connection-line {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #7e8794;
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.connection-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--success);
+
+  box-shadow:
+    0 0 8px rgba(34, 167, 106, 0.45);
+}
+
+.printing-status {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: var(--primary);
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.printing-status svg {
+  font-size: 11px;
+}
+
+
+/* =========================
+   SCROLL
+========================= */
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 4;
+
+  bottom: 25px;
+  left: 6%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #a0a6b1;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.scroll-line {
+  width: 35px;
+  height: 1px;
+
+  background: #d9dce3;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-product {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .hero {
+    min-height: auto;
+
+    padding: 115px 5% 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 58px;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-proof {
+    gap: 12px;
+  }
+
+  .hero-product {
+    min-height: 540px;
+  }
+
+  .product-panel {
+    width: 100%;
+
+    padding: 15px;
+  }
+
+  .printing-workflow {
+    gap: 5px;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .scanner-section,
+  .printer-section {
+    width: 145px;
+  }
+
+  .qr-display {
+    width: 125px;
+    height: 125px;
+
+    padding: 22px;
+  }
+
+  .printer-machine {
+    transform: scale(0.82);
+  }
+
+  .workflow-connection {
+    width: 35px;
+  }
+
+  .connection-text {
+    display: none;
+  }
+
+  .floating-card-file {
+    left: -5px;
+
+    width: 175px;
+  }
+
+  .floating-card-status {
+    right: -5px;
+  }
+
+  .product-orbit {
+    width: 390px;
+    height: 390px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+  .hero-content h1 {
+    font-size: 50px;
+
+    letter-spacing: -3.5px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .hero-primary-button,
+  .hero-text-button {
+    width: 100%;
+  }
+
+  .hero-product {
+    min-height: 500px;
+  }
+
+  .product-panel {
+    padding: 12px;
+  }
+
+  .product-panel-header {
+    padding-bottom: 12px;
+  }
+
+  .printing-workflow {
+    min-height: 300px;
+  }
+
+  .scanner-section,
+  .printer-section {
+    width: 120px;
+  }
+
+  .qr-display {
+    width: 105px;
+    height: 105px;
+
+    padding: 18px;
+  }
+
+  .qr-corner {
+    width: 23px;
+    height: 23px;
+
+    border-width: 3px;
+  }
+
+  .qr-corner-tl,
+  .qr-corner-tr {
+    top: 10px;
+  }
+
+  .qr-corner-bl,
+  .qr-corner-br {
+    bottom: 10px;
+  }
+
+  .qr-corner-tl,
+  .qr-corner-bl {
+    left: 10px;
+  }
+
+  .qr-corner-tr,
+  .qr-corner-br {
+    right: 10px;
+  }
+
+  .printer-machine {
+    transform: scale(0.68);
+  }
+
+  .workflow-connection {
+    width: 20px;
+  }
+
+  .connection-arrow {
+    font-size: 16px;
+  }
+
+  .floating-card-file {
+    width: 155px;
+
+    padding: 10px;
+  }
+
+  .floating-card-status {
+    padding: 9px;
+  }
+
+  .product-orbit {
+    width: 320px;
+    height: 320px;
+  }
+}
+/* =========================================
+   REAL QR DISPLAY — COMPACT HERO VERSION
+========================================= */
+
+.qr-display {
+  position: relative;
+
+  width: 180px;
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(91, 75, 255, 0.18);
+
+  box-shadow:
+    0 16px 35px rgba(57, 45, 160, 0.10),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+
+  overflow: hidden;
+}
+
+
+/* Real QR itself */
+
+.real-qr {
+  width: 145px;
+  height: 145px;
+
+  padding: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.real-qr canvas {
+  display: block;
+
+  width: 130px !important;
+  height: 130px !important;
+}
+
+
+/* =========================================
+   QR CANVAS INSIDE HERO
+========================================= */
+
+.qr-code {
+  width: 140px;
+  height: 140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+.qr-code canvas {
+  width: 130px !important;
+  height: 130px !important;
+}
+
+
+/* =========================================
+   QR CORNERS
+========================================= */
+
+.qr-corner {
+  position: absolute;
+
+  width: 27px;
+  height: 27px;
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
+.qr-corner-tl {
+  top: 13px;
+  left: 13px;
+
+  border-top: 3px solid #6455f5;
+  border-left: 3px solid #6455f5;
+
+  border-radius: 7px 0 0 0;
+}
+
+.qr-corner-tr {
+  top: 13px;
+  right: 13px;
+
+  border-top: 3px solid #6455f5;
+  border-right: 3px solid #6455f5;
+
+  border-radius: 0 7px 0 0;
+}
+
+.qr-corner-bl {
+  bottom: 13px;
+  left: 13px;
+
+  border-bottom: 3px solid #6455f5;
+  border-left: 3px solid #6455f5;
+
+  border-radius: 0 0 0 7px;
+}
+
+.qr-corner-br {
+  bottom: 13px;
+  right: 13px;
+
+  border-bottom: 3px solid #6455f5;
+  border-right: 3px solid #6455f5;
+
+  border-radius: 0 0 7px 0;
+}
+
+
+/* =========================================
+   QR SCAN ANIMATION
+========================================= */
+
+.qr-scan-line {
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+
+  top: 25px;
+
+  height: 2px;
+
+  z-index: 5;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #6c5ce7,
+    #8b7cff,
+    #6c5ce7,
+    transparent
+  );
+
+  box-shadow:
+    0 0 10px rgba(108, 92, 231, 0.6);
+
+  animation: qrScan 2.8s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes qrScan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(130px);
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}

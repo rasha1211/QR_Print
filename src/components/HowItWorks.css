@@ -1,0 +1,721 @@
+.how-section {
+  position: relative;
+  padding: 115px 6%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(99, 91, 255, 0.13),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(34, 211, 238, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #f5f6fa 0%,
+      #eef0f6 100%
+    );
+
+  color: #111625;
+}
+
+.how-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6%;
+  right: 6%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(99, 91, 255, 0.3),
+    transparent
+  );
+}
+
+.how-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.how-heading {
+  max-width: 700px;
+  margin-bottom: 65px;
+}
+
+.how-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: #737b8b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.how-label span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  background: #635bff;
+
+  box-shadow:
+    0 0 0 5px rgba(99, 91, 255, 0.09),
+    0 0 15px rgba(99, 91, 255, 0.25);
+}
+
+.how-heading h2 {
+  margin: 0;
+
+  color: #101522;
+
+  font-size: clamp(46px, 5vw, 68px);
+  line-height: 0.98;
+  letter-spacing: -3.8px;
+}
+
+.how-heading h2 span {
+  background: linear-gradient(
+    90deg,
+    #635bff,
+    #8b5cf6
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.how-heading p {
+  max-width: 550px;
+
+  margin-top: 25px;
+
+  color: #737b89;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   FOUR CARDS
+========================= */
+
+.how-steps {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.how-step {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(205, 209, 222, 0.9);
+
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(245, 246, 251, 0.92)
+    );
+
+  box-shadow:
+    0 15px 40px rgba(31, 38, 58, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.how-step:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(99, 91, 255, 0.3);
+
+  box-shadow:
+    0 25px 60px rgba(31, 38, 58, 0.11),
+    0 0 35px rgba(99, 91, 255, 0.07);
+}
+
+/* =========================
+   TOP
+========================= */
+
+.step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-number {
+  color: #635bff;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.step-label {
+  padding: 6px 9px;
+
+  border: 1px solid #e1e4eb;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #8d94a2;
+
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   VISUAL AREA
+========================= */
+
+.step-visual {
+  height: 145px;
+
+  margin-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* =========================
+   QR SCANNER
+========================= */
+
+.qr-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.qr-frame {
+  position: relative;
+
+  width: 105px;
+  height: 105px;
+
+  padding: 13px;
+
+  border-radius: 18px;
+
+  background: #111625;
+
+  box-shadow:
+    0 18px 35px rgba(31, 38, 58, 0.16),
+    0 0 35px rgba(99, 91, 255, 0.12);
+
+  overflow: hidden;
+}
+
+.qr-pattern {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 4px;
+
+  opacity: 0.95;
+}
+
+.qr-pattern span {
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.qr-pattern span:nth-child(2),
+.qr-pattern span:nth-child(5),
+.qr-pattern span:nth-child(9),
+.qr-pattern span:nth-child(12) {
+  opacity: 0.35;
+}
+
+.qr-corner {
+  position: absolute;
+
+  width: 21px;
+  height: 21px;
+
+  border: 3px solid #ffffff;
+
+  z-index: 3;
+}
+
+.qr-corner.top-left {
+  top: 10px;
+  left: 10px;
+
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.qr-corner.top-right {
+  top: 10px;
+  right: 10px;
+
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.qr-corner.bottom-left {
+  bottom: 10px;
+  left: 10px;
+
+  border-right: 0;
+  border-top: 0;
+}
+
+.scan-line {
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+
+  height: 2px;
+
+  background: #22d3ee;
+
+  box-shadow:
+    0 0 8px #22d3ee,
+    0 0 18px rgba(34, 211, 238, 0.7);
+
+  z-index: 5;
+}
+
+.scan-status,
+.print-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #858d9d;
+
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.scan-status span,
+.print-status span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #22d3ee;
+
+  box-shadow: 0 0 8px #22d3ee;
+}
+
+/* =========================
+   UPLOAD
+========================= */
+
+.upload-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-preview {
+  position: relative;
+
+  width: 90px;
+  height: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #dfe2eb;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #635bff;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 15px 30px rgba(31, 38, 58, 0.08);
+}
+
+.upload-file {
+  position: absolute;
+
+  bottom: 27px;
+
+  width: 30px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #eeecff;
+
+  color: #635bff;
+
+  font-size: 16px;
+}
+
+.upload-arrow {
+  position: absolute;
+
+  bottom: 8px;
+
+  color: #22d3ee;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.upload-animation > span,
+.payment-animation small {
+  color: #858d9d;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-animation {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-circle {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #eeecff,
+      #e2dfff
+    );
+
+  color: #635bff;
+
+  font-size: 29px;
+
+  box-shadow:
+    0 15px 30px rgba(99, 91, 255, 0.14);
+}
+
+.payment-lines {
+  display: flex;
+  gap: 4px;
+}
+
+.payment-lines span {
+  width: 25px;
+  height: 3px;
+
+  border-radius: 5px;
+
+  background: #d8dbe5;
+}
+
+.payment-lines span:first-child {
+  background: #635bff;
+}
+
+/* =========================
+   PRINT
+========================= */
+
+.print-animation {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 12px;
+}
+
+.printer-machine {
+  position: relative;
+
+  width: 110px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #171d2b;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 18px 30px rgba(31, 38, 58, 0.16);
+}
+
+.paper {
+  position: absolute;
+
+  top: 44px;
+
+  width: 55px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+
+  background: white;
+
+  color: #635bff;
+
+  font-size: 17px;
+
+  box-shadow:
+    0 5px 15px rgba(31, 38, 58, 0.12);
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.how-step h3 {
+  margin: 18px 0 8px;
+
+  color: #181e2b;
+
+  font-size: 19px;
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+.how-step p {
+  margin: 0;
+
+  color: #7b8391;
+
+  font-size: 10.5px;
+
+  line-height: 1.75;
+}
+
+/* =========================
+   ARROW
+========================= */
+
+.step-arrow {
+  position: absolute;
+
+  top: 50%;
+  right: -27px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(99, 91, 255, 0.18);
+
+  border-radius: 50%;
+
+  background: #eef0f6;
+
+  color: #635bff;
+
+  font-size: 12px;
+
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  box-shadow:
+    0 6px 18px rgba(31, 38, 58, 0.08);
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.how-bottom {
+  max-width: 850px;
+
+  margin: 55px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #858d9a;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.how-mini-card strong {
+  color: #242a37;
+}
+
+.mini-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #cfd3dc;
+}
+
+.mini-dot.active {
+  background: #635bff;
+
+  box-shadow:
+    0 0 0 5px rgba(99, 91, 255, 0.09),
+    0 0 12px rgba(99, 91, 255, 0.25);
+}
+
+.how-line {
+  width: 55px;
+  height: 1px;
+
+  margin: 0 14px;
+
+  background: #d5d8e1;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .how-section {
+    padding: 100px 5%;
+  }
+
+  .how-steps {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+  .how-bottom {
+    display: none;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .how-section {
+    padding: 85px 5%;
+  }
+
+  .how-heading {
+    margin-bottom: 45px;
+  }
+
+  .how-heading h2 {
+    font-size: 43px;
+    letter-spacing: -2.3px;
+  }
+
+  .how-heading p {
+    font-size: 13px;
+  }
+
+  .how-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .how-step {
+    min-height: 370px;
+
+    padding: 23px;
+
+    border-radius: 20px;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+}

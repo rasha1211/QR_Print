@@ -1,0 +1,546 @@
+.cta {
+  position: relative;
+
+  padding: 130px 6%;
+
+  overflow: hidden;
+
+  background: #f7f8fc;
+}
+
+.cta-container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1280px;
+
+  min-height: 540px;
+
+  margin: 0 auto;
+
+  padding: 80px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(99, 91, 255, 0.18),
+      transparent 35%
+    ),
+    #101522;
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+.cta-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(1px);
+
+  pointer-events: none;
+}
+
+.cta-glow-one {
+  width: 300px;
+
+  height: 300px;
+
+  top: -180px;
+
+  left: -100px;
+
+  background: rgba(99, 91, 255, 0.15);
+}
+
+.cta-glow-two {
+  width: 250px;
+
+  height: 250px;
+
+  right: -80px;
+
+  bottom: -120px;
+
+  background: rgba(34, 211, 238, 0.1);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.cta-content {
+  position: relative;
+
+  z-index: 3;
+}
+
+.cta-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: #8e96a7;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.cta-eyebrow span {
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22d3ee;
+
+  box-shadow:
+    0 0 0 5px rgba(34, 211, 238, 0.09);
+}
+
+.cta-content h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(48px, 5vw, 70px);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+}
+
+.cta-content h2 span {
+  color: #777f91;
+}
+
+.cta-content p {
+  margin: 25px 0 32px;
+
+  color: #9299a8;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.cta-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.cta-primary {
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-radius: 10px;
+
+  background: #635bff;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 30px rgba(99, 91, 255, 0.3);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px);
+
+  background: #7069ff;
+}
+
+.cta-primary svg {
+  font-size: 16px;
+}
+
+.cta-trust {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #777f8f;
+
+  font-size: 10px;
+}
+
+.cta-trust svg {
+  color: #22c55e;
+}
+
+
+/* =====================================================
+   QR AREA
+===================================================== */
+
+.cta-qr-area {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 390px;
+}
+
+.cta-qr-glow {
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  border-radius: 50%;
+
+  background: rgba(99, 91, 255, 0.18);
+
+  filter: blur(35px);
+}
+
+
+/* =====================================================
+   QR CARD
+===================================================== */
+
+.cta-qr-card {
+  position: relative;
+
+  z-index: 3;
+
+  width: 270px;
+
+  padding: 18px;
+
+  border: 1px solid #343b4b;
+
+  border-radius: 22px;
+
+  background: rgba(21, 27, 40, 0.88);
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(15px);
+}
+
+.cta-qr-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.cta-qr-top > span {
+  color: #7f8797;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.cta-live {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #8a92a2;
+
+  font-size: 7px;
+
+  font-weight: 800;
+}
+
+.cta-live span {
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 7px rgba(34, 197, 94, 0.7);
+}
+
+
+/* =====================================================
+   REAL QR CODE
+===================================================== */
+
+.cta-qr {
+  position: relative;
+
+  width: 210px;
+
+  height: 210px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.cta-qr canvas {
+  display: block;
+
+  width: 210px !important;
+
+  height: 210px !important;
+}
+
+
+/* =====================================================
+   QR SCANNING ANIMATION
+===================================================== */
+
+.qr-scan-line {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 10px;
+
+  right: 10px;
+
+  height: 2px;
+
+  background: #22d3ee;
+
+  box-shadow:
+    0 0 15px #22d3ee;
+
+  animation:
+    qrScan 2.5s ease-in-out infinite;
+}
+
+@keyframes qrScan {
+  0% {
+    top: 15%;
+  }
+
+  50% {
+    top: 82%;
+  }
+
+  100% {
+    top: 15%;
+  }
+}
+
+
+/* =====================================================
+   QR BOTTOM TEXT
+===================================================== */
+
+.cta-qr-bottom {
+  padding: 17px 3px 2px;
+
+  text-align: center;
+}
+
+.cta-qr-bottom strong,
+.cta-qr-bottom span {
+  display: block;
+}
+
+.cta-qr-bottom strong {
+  color: #f3f4f6;
+
+  font-size: 12px;
+}
+
+.cta-qr-bottom span {
+  margin-top: 4px;
+
+  color: #727b8c;
+
+  font-size: 8px;
+}
+
+
+/* =====================================================
+   FLOATING BADGES
+===================================================== */
+
+.floating-badge {
+  position: absolute;
+
+  z-index: 6;
+
+  padding: 9px 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  border: 1px solid #343b4b;
+
+  border-radius: 9px;
+
+  background: #171d2a;
+
+  color: #a4aab6;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.badge-top {
+  top: 70px;
+
+  right: 25px;
+}
+
+.badge-top svg {
+  color: #22c55e;
+
+  font-size: 12px;
+}
+
+.badge-bottom {
+  right: 10px;
+
+  bottom: 55px;
+
+  color: #8e96a5;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+  .cta-container {
+    grid-template-columns: 1fr;
+
+    padding: 70px 50px;
+  }
+
+  .cta-content {
+    max-width: 600px;
+  }
+
+  .cta-qr-area {
+    min-height: 420px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .cta {
+    padding: 80px 5%;
+  }
+
+  .cta-container {
+    padding: 55px 25px;
+
+    border-radius: 24px;
+  }
+
+  .cta-content h2 {
+    letter-spacing: -2.8px;
+  }
+
+  .cta-qr-card {
+    width: 245px;
+  }
+
+  .cta-qr {
+    width: 190px;
+
+    height: 190px;
+  }
+
+  .cta-qr canvas {
+    width: 190px !important;
+
+    height: 190px !important;
+  }
+
+  .badge-top {
+    right: 0;
+  }
+
+  .badge-bottom {
+    right: 0;
+  }
+}
