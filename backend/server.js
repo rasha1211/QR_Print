@@ -91,7 +91,7 @@ app.post("/api/sessions", async (req, res) => {
     const sessionId = crypto.randomUUID();
 
     // QR link that belongs to this session
-    const qrData = `http://10.39.65.10:5173/print/${sessionId}`;
+    const qrData = `https://qr-print-lyart.vercel.app/print/${sessionId}`;
 
     await db.query(
       `

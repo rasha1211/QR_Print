@@ -6,7 +6,7 @@ import "./QRCodeSection.css";
 function QRCodeSection({ sessionId, paymentId }) {
   const [copied, setCopied] = useState(false);
 
-const qrValue = `http://10.39.65.10:5173/print/${sessionId}`;
+const qrValue = `https://qr-print-lyart.vercel.app/print/${sessionId}`;
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(qrValue);

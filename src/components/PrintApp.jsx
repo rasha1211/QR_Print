@@ -12,7 +12,7 @@ import {
 import { motion } from "framer-motion";
 import "./PrintApp.css";
 
-const API_URL = "http://10.39.65.10:5000";
+const API_URL = "https://qrprint-production.up.railway.app";
 
 function PrintApp({ onBack }) {
   const [step, setStep] = useState(1);
