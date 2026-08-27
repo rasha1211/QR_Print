@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/print",
+      "destination": "/"
+    },
+    {
+      "source": "/print/(.*)",
+      "destination": "/"
+    }
+  ]
+}
